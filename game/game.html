@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>King Dungeon</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <button class="back-button" onclick="goBackHome()">Back to Home</button>
+
+<div id="score-indicator" class="score-display">
+  0/10
+</div>
+
+<div id="question-box">
+  <span id="question-text"></span>
+</div>
+
+<canvas></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="
+    sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==
+    "
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+<script src="js/utils.js"></script>
+<script src="js/data/collisions.js"></script>
+<script src="js/classes/CollisionBlock.js"></script>
+<script src="js/classes/Sprite.js"></script>
+<script src="js/classes/Player.js"></script>
+<script src="js/eventListeners.js"></script>
+<script src="js/data/levels.js"></script>
+<script src="js/data/questions.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>

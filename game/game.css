@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('./Asset/PixelifySans-Regular.woff2') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: black;
+}
+canvas {
+    display: block;
+}
+canvas {
+    display: block;
+    margin-top: 50px; /* atau sesuaikan tinggi question box */
+}
+#question-box {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 8px; /* Padding horizontal dan vertikal */
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  font-family: 'PixelifySans', Arial;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+  border-radius: 12px; /* Sudut membulat */
+  display: inline-block; /* Agar lebarnya mengikuti konten */
+  z-index: 1000;
+  max-width: 90%; /* Agar tetap responsif di layar kecil */
+  word-wrap: break-word; /* Pastikan teks panjang tetap terbungkus */
+}
+
+/* Back Button Style from Uiverse.io by WhiteNervosa */
+.back-button {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: fixed;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 100;
+}
+
+.back-button:focus,
+.back-button:hover {
+  color: #fff;
+}
+
+.back-button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.4s, left 0.4s;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.back-button:focus:after,
+.back-button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+/*Skor */
+.score-display {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 999;
+  font-family: 'PixelifySans', sans-serif;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
