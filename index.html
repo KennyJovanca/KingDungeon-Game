@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>King Dungeon</title>
+  <link rel="shortcut icon" href="game/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="banner">
@@ -16,16 +20,10 @@
 
     <div class="content">
       <img src="game/img/Title.png" alt="Title" class="title-image">
-      <div class="buttons">
-        <button id="start-button" class="btn">
-          <span></span>
-          <p data-start="good luck!" data-text="start!" data-title="Play?"></p>
-        </button>
-      </div>
+      <button id="start-button" class="pixel-button">Mulai Bermain</button>
     </div>
   </div>
 
-  <!-- How to Play Pop-up Overlay -->
   <div id="howToPlayPopup" class="popup-overlay">
     <div class="popup-content">
       <div class="card">
@@ -36,25 +34,23 @@
   🎯 <strong>Tujuan Permainan:</strong> Jawab 10 pertanyaan dengan benar untuk mencapai ruang akhir dan menaklukkan dungeon.
   <br><br>
   🎮 <strong>Kontrol:</strong><br>
-- Tekan <strong>W</strong> untuk <strong>melompat</strong> dan <strong>masuk ke pintu</strong><br>
-- Tekan <strong>A</strong> untuk <strong>bergerak ke kiri</strong><br>
-- Tekan <strong>D</strong> untuk <strong>bergerak ke kanan</strong><br>
+  - Tekan <strong>W</strong> untuk <strong>melompat</strong> dan <strong>masuk ke pintu</strong>.<br>
+  - Tekan <strong>A</strong> untuk <strong>bergerak ke kiri</strong>.<br>
+  - Tekan <strong>D</strong> untuk <strong>bergerak ke kanan</strong>.
   <br><br>
   🧩 <strong>Alur Permainan:</strong><br>
-  - Setelah menekan tombol <strong>Play</strong>, kamu akan masuk ke <strong>Ruang Awal</strong>.<br>
+  - Setelah menekan tombol "Mulai Bermain", kamu akan masuk ke <strong>Ruang Awal</strong>.<br>
   - Masuki pintu di Ruang Awal untuk menuju <strong>Ruang Pertanyaan</strong>.<br>
   - Di dalam Ruang Pertanyaan, pilih jawaban dengan masuk ke salah satu dari empat pintu yang tersedia.<br><br>
 
   ✅ Jika jawaban benar, kamu akan melanjutkan ke pertanyaan berikutnya.<br>
-  ❌ Jika jawaban salah, kamu akan kembali ke Ruang Awal dan <strong>urutan pertanyaan akan diacak</strong> menggunakan algoritma <em>Fisher-Yates Shuffle</em>.<br><br>
+  ❌ Jika jawaban salah, kamu akan kembali ke Ruang Awal dan <strong>urutan pertanyaan akan diacak</strong>.<br><br>
 
   🏁 Setelah menjawab <strong>10 pertanyaan dengan benar</strong>, kamu akan sampai di <strong>Ruang Akhir</strong>.<br>
-  - Di Ruang Akhir, kamu bisa <strong>memainkan ulang</strong> game dengan masuk ke pintu yang tersedia.<br>
-  - Saat dimulai ulang, <strong>pertanyaan, peta level, dan jawaban akan diacak kembali</strong> menggunakan algoritma Fisher-Yates.
-  <br><br>
+  - Di Ruang Akhir, kamu bisa <strong>memainkan ulang</strong> game dengan masuk ke pintu yang tersedia.<br><br>
+  
   Semoga beruntung dan selamat bersenang-senang!
 </p>
-
         <div class="go-corner">
           <div class="go-arrow">→</div>
         </div>

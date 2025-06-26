@@ -5,16 +5,15 @@
     <title>King Dungeon</title>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button class="back-button" onclick="goBackHome()">Back to Home</button>
+  <button onclick="goBackHome()">Back</button>
 
 <div id="score-indicator" class="score-display">
   0/10
-</div>
-
-<div id="question-box">
-  <span id="question-text"></span>
 </div>
 
 <canvas></canvas>
@@ -34,6 +33,7 @@
 <script src="js/eventListeners.js"></script>
 <script src="js/data/levels.js"></script>
 <script src="js/data/questions.js"></script>
+<script src="js/ui.js"></script>
 <script src="game.js"></script>
 
 </body>

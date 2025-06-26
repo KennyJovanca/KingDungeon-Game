@@ -9,70 +9,25 @@ body {
     margin: 0;
     background: black;
 }
-canvas {
-    display: block;
-}
-canvas {
-    display: block;
-    margin-top: 50px; /* atau sesuaikan tinggi question box */
-}
-#question-box {
+
+button {
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px 8px; /* Padding horizontal dan vertikal */
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-align: center;
-  font-family: 'PixelifySans', Arial;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.4;
-  border-radius: 12px; /* Sudut membulat */
-  display: inline-block; /* Agar lebarnya mengikuti konten */
-  z-index: 1000;
-  max-width: 90%; /* Agar tetap responsif di layar kecil */
-  word-wrap: break-word; /* Pastikan teks panjang tetap terbungkus */
-}
-
-/* Back Button Style from Uiverse.io by WhiteNervosa */
-.back-button {
-  font-size: 18px;
-  color: #e1e1e1;
-  font-family: inherit;
-  font-weight: 800;
-  cursor: pointer;
-  position: fixed;
-  border: none;
-  background: none;
-  text-transform: uppercase;
-  transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  z-index: 100;
-}
-
-.back-button:focus,
-.back-button:hover {
+  top: 5px;          
+  left: 5px;         
+  z-index: 10;    
   color: #fff;
+  background-color: #db8040;
+  padding: 10px 30px 10px 30px;
+  margin: 10px;
+  font-size: 12px;
+  font-family: "Press Start 2P", system-ui;
+  border: 0;
+  box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038, inset 0px 5px #ffffff36 ;
+  cursor: pointer;
 }
-
-.back-button:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition: width 0.4s, left 0.4s;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.back-button:focus:after,
-.back-button:hover:after {
-  width: 100%;
-  left: 0%;
+ button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,inset 0px 5px #00000038;
 }
 
 /*Skor */
