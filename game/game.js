@@ -1,4 +1,4 @@
-// Konfigurasi utama game, mudah diubah di satu tempat
+// Konfigurasi utama game
 const GAME_CONFIG = {
   CANVAS_WIDTH: 1024,
   CANVAS_HEIGHT: 576,
@@ -117,13 +117,13 @@ function handleDoorEnterComplete() {
 }
 
 // --- FUNGSI RENDER (MENGGAMBAR) ---
-
 // Loop utama game yang dipanggil setiap frame
 function animate() {
   window.requestAnimationFrame(animate);
 
   background.draw();
   doors.forEach(door => door.draw());
+  npcs.forEach(npc => npc.draw());
   player.handleInput(keys);
   player.draw();
   player.update();
@@ -142,6 +142,9 @@ function animate() {
 // --- INISIALISASI GAME ---
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Starting game.');
+
+    testFisherYates(); // <-- FUNGSI UNTUK MENGUJICOBA FUNGSI FISHER-YATES
+
     resetGame();
     animate();
 });

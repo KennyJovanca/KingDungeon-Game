@@ -106,3 +106,34 @@ function wrapText(text, maxWidth, fontSize) {
   if (currentLine) lines.push(currentLine.trim());
   return lines;
 }
+
+// --- FUNGSI KHUSUS UNTUK PENGUJIAN ALGORITMA ---
+function testFisherYates() {
+  console.log("--- MEMULAI PENGUJIAN UNIT ALGORITMA FISHER-YATES ---");
+
+  // TEST 1: UJI KELENGKAPAN ELEMEN
+  console.log("\nTEST 1: Memastikan tidak ada elemen yang hilang/duplikat.");
+  const originalArray = ['A', 'B', 'C', 'D', 'E'];
+  const arrayToShuffle = [...originalArray]; // Buat salinan untuk diacak
+
+  console.log("Array Asli:", originalArray);
+  const shuffledArray = fisherYatesShuffle(arrayToShuffle);
+  console.log("Array Hasil Acak:", shuffledArray);
+
+  // Verifikasi: Urutkan keduanya dan bandingkan
+  const sortedOriginal = [...originalArray].sort();
+  const sortedShuffled = [...shuffledArray].sort();
+  
+  const isIntegrityOK = JSON.stringify(sortedOriginal) === JSON.stringify(sortedShuffled);
+  console.log(`Hasil Uji Kelengkapan: ${isIntegrityOK ? 'LULUS' : 'GAGAL'}`);
+  console.log("--------------------------------------------------");
+
+  // TEST 2: UJI KEACAKAN HASIL
+  console.log("\nTEST 2: Memastikan hasil acakan berbeda setiap saat.");
+  const testArray = [1, 2, 3, 4, 5, 6, 7];
+  console.log("Menjalankan shuffle 3 kali pada array:", testArray);
+  console.log("Hasil 1:", fisherYatesShuffle([...testArray]));
+  console.log("Hasil 2:", fisherYatesShuffle([...testArray]));
+  console.log("Hasil 3:", fisherYatesShuffle([...testArray]));
+  console.log("--------------------------------------------------");
+}

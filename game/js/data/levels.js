@@ -32,8 +32,14 @@ function createLevel({
         loop: false,
         autoplay: false
       }))
+      // Selalu reset array npcs di setiap level baru
+      npcs = [] 
+
+      // Jika level ini memiliki data NPC, baru buat objeknya
       if (npcData.length > 0) {
-        npcs = npcData.map(data => new Sprite(data))
+        npcData.forEach(data => {
+          npcs.push(new Sprite(data))
+        })
       }
     }
   }
